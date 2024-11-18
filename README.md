@@ -115,8 +115,9 @@ Through the systematic application of machine learning models and evaluation tec
 ---  
 
 ## Repository Structure  
-- **data/**: Contains raw and processed datasets.  
-- **notebooks/**: Jupyter notebooks with detailed analysis and visualization. 
+- **auto.csv/**: Contains raw and processed datasets.  
+- **OLD CAR PRICE DATASET ANALYSIS/**: Jupyter notebooks with detailed analysis and visualization on dataset.
+- **MODEL DEVELOPMENT AND EVALUATION/**: Jupyter notebooks with detailed model development, analysis, visualization, and refinement on dataset.
 
 ---
 
