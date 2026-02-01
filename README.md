@@ -1,127 +1,105 @@
-# CarPredict Analysis  
+# 🚗 CarPredict: Advanced Car Price Estimation  
 
-## Overview  
-This repository contains the implementation and analysis of a **Car Price Prediction** project. The project aims to predict car prices using various data analysis, transformation, and machine learning techniques.  
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.2%2B-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
 
----
-
-## Libraries Used  
-- **Numpy**: For numerical computations.  
-- **Pandas**: For data manipulation and analysis.  
-- **Matplotlib**: For data visualization.  
-- **Scipy**: For statistical analysis.  
-- **Seaborn**: For enhanced visualizations.  
-- **Sklearn**: For building and evaluating machine learning models.  
+An end-to-end Machine Learning project focused on predicting automobile prices using a comprehensive dataset of car characteristics. This project demonstrates a complete data science lifecycle, from raw data acquisition to a high-performing predictive model.
 
 ---
 
-## Workflow  
+## 🎯 Project Objective
+The goal is to develop an accurate estimation model for used car prices based on features like engine size, horsepower, curb weight, and fuel efficiency. This assists both buyers and sellers in determining fair market value.
 
-### 1. **Data Acquisition**  
-- Data loaded into the `bpd` dataframe.  
-- Column headers were added based on index numbers.  
-- Dataset saved as CSV for future use.  
+**Key Achievement:** Developed a refined model achieving an **R² score of 0.84**, significantly improving upon baseline linear regression models.
 
 ---
 
-### 2. **Data Understanding**  
-- Explored features and their data types.  
-- Generated statistical summaries using `describe(include="all")`.  
-- Used `info()` to inspect non-null values and data types.  
+## 🛠️ Tech Stack & Skills
+- **Data Manipulation**: `Pandas`, `NumPy`
+- **Visualization**: `Matplotlib`, `Seaborn` (Regression plots, box plots, heatmaps)
+- **Mathematical Modeling**: `Scipy`
+- **Machine Learning**: `Scikit-Learn` (Linear Regression, Polynomial Regression, Ridge Regression, Grid Search)
+- **Preprocessing**: `StandardScaler`, `LabelEncoder`, `One-Hot Encoding`
 
 ---
 
-### 3. **Data Wrangling**  
-Identified and handled missing data:  
-1. **Identify missing data**.  
-2. **Handle missing data**.  
-3. **Correct data format**.  
+## 🚀 Project Workflow
+
+### 1. Data Wrangling & Cleaning
+- Handled missing values (symbolized by '?') through mean imputation and frequency substitution.
+- Corrected data formats for numerical features.
+- Normalized quantitative features to ensure uniform scaling.
+
+### 2. Exploratory Data Analysis (EDA)
+- Analyzed **Continuous Variables** using regression plots to visualize linear relationships with price.
+- Analyzed **Categorical Variables** using box plots to evaluate their predictive power.
+- Conducted **Pearson Correlation** and **ANOVA** to identify critical features.
+
+### 3. Model Development
+Iteratively built and evaluated multiple regression architectures:
+- **Simple Linear Regression (SLR)**: Baseline model.
+- **Multiple Linear Regression (MLR)**: Incorporated multiple influential features.
+- **Polynomial Regression**: Captured non-linear trends.
+- **Data Pipelines**: Streamlined scaling and transformations.
+
+### 4. Model Evaluation & Refinement
+- Utilized **Cross-Validation** to ensure model generalizability.
+- Performed **Ridge Regression** to mitigate overfitting.
+- Optimized hyperparameters using **Grid Search** (tuning `alpha` for Ridge).
 
 ---
 
-### 4. **Data Transformation**  
-- Converted quantitative features to appropriate metrics using mathematical techniques.  
+## 📊 Performance Summary
+
+| Model Type                 | R² Score | Mean Squared Error (MSE) |
+|----------------------------|----------|--------------------------|
+| Simple Linear Regression   | 0.6418   | 2.25 x 10⁷               |
+| Polynomial Regression      | 0.6754   | 2.04 x 10⁷               |
+| Multiple Linear Regression | 0.8119   | 1.20 x 10⁷               |
+| **Refined Ridge Model**    | **0.8400** | *Optimized*              |
 
 ---
 
-### 5. **Data Normalization**  
-- Normalized numerical features.  
-- Used binning for categorizing numerical variables.  
-- Applied **one-hot encoding** to convert categorical variables into numerical ones.  
+## 📁 Repository Structure
+```text
+├── OLD CAR PRICE DATASET ANALYSIS.ipynb      # Detailed Data Wrangling & EDA
+├── MODEL DEVELOPMENT AND EVALUATION.ipynb    # Model Building & Hyperparameter Tuning
+├── auto.csv                                  # Raw Dataset
+├── subsimple/                                # Compressed project files
+└── README.md                                 # Project Documentation
+```
 
 ---
 
-### 6. **Exploratory Data Analysis (EDA)**  
-- **Continuous Numerical Variables Analysis**: Regression plots to assess linear relationships.  
-- **Categorical Variables Analysis**: Used box plots, `value_counts`, grouping, and pivot tables.  
-- **Descriptive Statistical Analysis**: Heatmaps, correlation, causation, and ANOVA analysis.  
+## 📥 Installation & Usage
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ANKIT21111/CarPredict.git
+   ```
+2. Install dependencies:
+   ```bash
+   pip install pandas numpy matplotlib seaborn scikit-learn scipy
+   ```
+3. Run the Jupyter Notebooks:
+   ```bash
+   jupyter notebook
+   ```
 
 ---
 
-### 7. **Feature Selection**  
-Key variables for price prediction:  
-- **Continuous Numerical Variables**: Length, Width, Curb-weight, Engine-size, Horsepower, City-mpg, Highway-mpg, Wheel-base, Bore.  
-- **Categorical Variables**: Drive-wheels.  
+## 💡 Key Insights
+- **Engine Size**, **Curb Weight**, and **Horsepower** emerged as the strongest predictors of car price.
+- Non-linear relationships were successfully captured using Polynomial transformations, but **Multiple Linear Regression** provided the best balance of complexity and accuracy.
+- Hyperparameter tuning through Ridge Regression was essential in reducing variance and achieving the final R² of 0.84.
 
 ---
 
-### 8. **Model Development**  
-1. **Simple Linear Regression**: One independent variable.  
-2. **Multiple Linear Regression (MLR)**: Multiple independent variables.  
-3. **Polynomial Regression**: Non-linear relationships handled via polynomial transformations.  
-4. **Pipelines**: Simplified data preprocessing and scaling using `Pipeline` and `StandardScaler`.  
+## 👨‍💻 Author
+**Ankit Abhishek**  
+Data Engineering Professional | Machine Learning Enthusiast  
+[LinkedIn](https://www.linkedin.com/in/ankitabhishekdataengineering/) | [Portfolio](https://ankitabhishek.com)
 
 ---
-
-### 9. **Model Evaluation**  
-- Used regression and residual plots for model visualization.  
-- Evaluated models using **R²** and **Mean Squared Error (MSE)** metrics.  
-
-**Performance Metrics**:  
-- **Simple Linear Regression**:  
-  - R²: 0.6418  
-  - MSE: 2.25 x 10⁷  
-- **Multiple Linear Regression**:  
-  - R²: 0.8119  
-  - MSE: 1.2 x 10⁷  
-- **Polynomial Regression**:  
-  - R²: 0.6754  
-  - MSE: 2.04 x 10⁷  
-
-**Conclusion**: MLR provided the best results due to its ability to account for multiple variables.  
-
----
-
-### 10. **Model Predictions**  
-- Predicted outcomes for the test dataset using regression models.  
-- Compared **training** and **testing** R² scores.  
-- Applied `cross_val_score` to address limited test data issues.  
-
----
-
-### 11. **Model Refinement**  
-- **Techniques Used**:  
-  - Polynomial Features  
-  - Ridge Regression  
-  - Hyperparameter Tuning (using `alpha` variable and Grid Search).  
-
-- **Optimized Result**: Achieved an R² score of **0.84** for the test dataset after optimization.  
-
----
-
-## Key Insights  
-Through the systematic application of machine learning models and evaluation techniques, we identified that the **Multiple Linear Regression model** offers the best predictive power for car price estimation. The use of model refinement and hyperparameter tuning further improved prediction accuracy.  
-
----  
-
-## Repository Structure  
-- **https://raw.githubusercontent.com/ANKIT21111/CarPredict/main/subsimple/CarPredict.zip**: Contains raw and processed datasets.  
-- **OLD CAR PRICE DATASET ANALYSIS/**: Jupyter notebooks with detailed analysis and visualization on dataset.
-- **MODEL DEVELOPMENT AND EVALUATION/**: Jupyter notebooks with detailed model development, analysis, visualization, and refinement on dataset.
-
----
-
-## Conclusion  
-This project provides a robust framework for car price prediction using exploratory data analysis and machine learning techniques. The repository can be extended for other regression problems with similar workflows.  
-
-For contributions or feedback, feel free to raise an issue or submit a pull request! 🚗📊
+*If you find this project useful, feel free to ⭐ the repository!*
